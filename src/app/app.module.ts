@@ -17,7 +17,6 @@ import { CreatorFormComponent } from './components/creator/creator-form/creator-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
