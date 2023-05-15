@@ -19,4 +19,8 @@ export class HomepageComponent implements OnInit {
   hireTalenBtn(): void {
     this.router.navigate(['/creatorlist']).then();
   }
+
+  createBtn(): void {
+    this.router.navigate(['/creatorForm']).then();
+  }
 }

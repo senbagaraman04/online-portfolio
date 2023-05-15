@@ -5,6 +5,10 @@ import { CreatorProfile } from './CreatorProfile';
   providedIn: 'root'
 })
 export class CreatorlistService {
+
+  constructor(){
+    //Write code to hit the Appwrite here...
+  }
   
   getCreatorList(): CreatorProfile[] {
 
