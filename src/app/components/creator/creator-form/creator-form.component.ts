@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CREATOR_FORMS } from './creator-form.models';
 
 @Component({
   selector: 'app-creator-form',
@@ -9,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class CreatorFormComponent implements OnInit {
 
-  loginForm!: FormGroup;
-  constructor(     private router: Router) {
+  creatorForm!: FormGroup;
+  constructor(private router: Router) {
     
    }
 
@@ -18,15 +19,19 @@ export class CreatorFormComponent implements OnInit {
     this.createLoginForm();
   }
 
+  /**
+   * Initailizes and creates the form
+   */
   createLoginForm(){
-    // this.loginForm = this.fb.group({
-    //   email: ["", Validators.required],
-    //   password: ["", Validators.required]    
-    // });
+    this.creatorForm = CREATOR_FORMS();
   }
 
-  onLogin() {
-     
+
+  /**
+   * Method called when user clicks the form  to create the profile
+   */
+  profileCreation() {
+      console.log(this.creatorForm.value)
   }
 
 

@@ -7,6 +7,8 @@ import { CreatorListComponent } from './components/creator/creator-list/creator-
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { CreatorFormComponent } from './components/creator/creator-form/creator-form.component';
 import { PortfoliocardsComponent } from './shared/portfoliocards/portfoliocards.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PortfolioInputComponent } from './shared/portfolio-input/portfolio-input.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { PortfoliocardsComponent } from './shared/portfoliocards/portfoliocards.
     CreatorListComponent,
     HomepageComponent,
     CreatorFormComponent,
-    PortfoliocardsComponent
+    PortfoliocardsComponent,
+    PortfolioInputComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

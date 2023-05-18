@@ -7,57 +7,56 @@
                     <p class="blue-text">Just add your details</p>
                     <div class="card">
                         <h5 class="text-center mb-4">Powering world-class Creators</h5>
-                        <form class="form-card">
+                        <form class="form-card"  [formGroup]="creatorForm">
                             <div class="row justify-content-between text-left">
                                 <div class="form-group col-sm-6 flex-column d-flex">
-                                    <input type="text" id="fname" name="fname" placeholder="Full Name *" required>
+                                    <input type="text" id="name" name="name" placeholder="Full Name *"  formControlName="name"   required>
                                 </div>
                                 <div class="form-group col-sm-6 flex-column d-flex"> 
-                                     <input type="text" id="subtitle" name="subtitle" placeholder="Title (other than Position)" > </div>
+                                     <input type="text" id="subtitle" name="subtitle" formControlName="subtitle"  placeholder="Title (other than Position)" required> </div>
                             </div>
                             <div class="row justify-content-between text-left">
                                 <div class="form-group col-sm-6 flex-column d-flex">  
-                                     <input type="text" id="positiontitle" name="positiontitle" placeholder="Position Title *">
+                                     <input type="text" id="title" name="title" formControlName="title" placeholder="Position Title *" required>
                                  </div>
                                 <div class="form-group col-sm-6 flex-column d-flex"> 
-                                      <input type="number" id="mob" name="mob" placeholder="Phone Number *">
+                                      <input type="number" id="phoneNumber" name="phoneNumber" placeholder="Phone Number *" formControlName="phoneNumber" required>
                                  </div>
                             </div>
                             <div class="row justify-content-between text-left">
                                 <div class="form-group col-sm-6 flex-column d-flex"> 
-                                     <input type="text" id="country" name="country"  placeholder="Country"> 
+                                     <input type="text" id="country" name="country"  placeholder="Country" formControlName="country" required> 
                                 </div>
                                 <div class="form-group col-sm-6 flex-column d-flex"> 
-                                    <input type="text" id="technology" name="technology"  placeholder="Expertise Technologies *"> 
+                                    <input type="text" id="technology" name="technology"  placeholder="Expertise Technologies *" formControlName="technology" required> 
                                </div>
                             </div>
                             <div class="row justify-content-between text-left">
                                 <div class="form-group col-sm-6 flex-column d-flex"> 
-                                     <input type="text" id="description" name="description"  placeholder="A short intro about you"> 
+                                     <input type="text" id="description" name="description"  placeholder="A short intro about you" formControlName="description" required> 
                                 </div>
                             </div>
-
                             <div class="row justify-content-between text-left">
                                 <div class="form-group col-sm-6 flex-column d-flex">
-                                    <input type="text" id="githubUrl" name="githubUrl" placeholder="Github URL" required>
+                                    <input type="text" id="githubUrl" name="githubUrl" placeholder="Github URL" formControlName="githubUrl" required>
                                 </div>
                                 <div class="form-group col-sm-6 flex-column d-flex"> 
-                                    <input type="text" id="gitlabURL" name="gitlabURL" placeholder="Gitlab URL" required>
+                                    <input type="text" id="gitLabUrl" name="gitLabUrl" placeholder="Gitlab URL" formControlName="gitLabUrl"  required>
                                     </div>
                             </div>
-
                             <div class="row justify-content-between text-left">
                                 <div class="form-group col-sm-6 flex-column d-flex">
-                                    <input type="text" id="linkedinURL" name="linkedinURL" placeholder="LinkedIn URL" required>
+                                    <input type="text" id="linkedInUrl" name="linkedInUrl" placeholder="LinkedIn URL" formControlName="linkedInUrl"  required>
                                 </div>
                                 <div class="form-group col-sm-6 flex-column d-flex"> 
-                                    <input type="text" id="stackoverflowURL" name="stackoverflowURL" placeholder="Stackoverflow URL" required>
-                                    </div>
-                            </div>
-                            
+                                    <input type="text" id="stackoverflowId" name="stackoverflowId" placeholder="Stackoverflow URL" formControlName="stackoverflowId"  required>
+                                </div>
+                            </div>                          
                             
                             <div class="row justify-content-center my-">
-                                <div class="form-group col-sm-6"> <button type="submit" class="btn  btn-primary">Create Profile</button> </div>
+                                <div class="form-group col-sm-6">
+                            <button type="submit" class="btn btn-primary" 
+                                     (click)="profileCreation()">Create Profile</button> </div>
                             </div>
                         </form>
                     </div>
@@ -91,7 +90,20 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 justify-content-left">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac dolor libero. </div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac dolor libero.
+                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+<div class="social-profile-card card">
+
+</div>
+
+                           </div>
+                            <div class="col-md-6">
+                                
+                            </div>
+
                         </div>
                     </div>
                 </div>
