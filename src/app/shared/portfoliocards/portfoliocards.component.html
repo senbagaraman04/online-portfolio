@@ -3,17 +3,43 @@
         <div class="cover-photo">
             <img src="https://i.imgur.com/KykRUCV.jpeg" class="profile" alt="cover-photo">
         </div>
-        <h3 class="profile-name">{{i.name}}</h3>
-        <p class="about"> {{i.title}} <br> 
-                         {{i.subtitle}}</p>
-        <button class="btn">View More</button>
+        <div class="text-align-right">
+            <h3 class="profile-name">{{i.name}}</h3>
+            <p class="about"> {{i.title}} <br> 
+                            {{i.subtitle}}</p>
+        </div>
 
+        <div class="row ml-2 px-2 text-aling-left white-text">
+            About Me :
+            <div class="col-md-9">
+                {{i.description}}
+            </div>
+            
+        </div>
 
-        <div class="icons">
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-twitter"></i>
+        <div class="row ml-2 px-2 text-aling-left white-text">
+           Skills:
+           <div class="col-md-9">
+            {{i.technology}}
+        </div>
+      
+        </div>
+       
+      
+        <div class="icons white-text px-2 my-2">
+              <a [attr.href]="i.githubUrl"  *ngIf="i.githubUrl" target="_blank"> <i class="bi bi-github"> </i></a>
+             <a [attr.href]="i.stackoverflowId" *ngIf="i.stackoverflowId" target="_blank"> <i class="bi bi-stack-overflow"> </i></a>
+             <a [attr.href]="i.linkedInUrl" *ngIf="i.linkedInUrl" target="_blank"> <i class="bi bi-linkedin"> </i></a>
+             <a [attr.href]="i.gitLabUrl" *ngIf="i.gitLabUrl" target="_blank"> <i class="bi bi-browser-chrome"> </i></a>
+ 
+            </div>
+    </div>
+
+    
+
+    <div class="row white-text justify-content-left">
+        <div class="col-md-12">
+            Description
         </div>
     </div>
 

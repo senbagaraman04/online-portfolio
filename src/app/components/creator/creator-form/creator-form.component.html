@@ -63,50 +63,14 @@
                 </div>
             </div>
 
-            <div class="col-xl-5 col-lg-4 col-md-3  text-center">
+            <div class="col-xl-5 col-lg-4 col-md-3  text-center ">
                 <h3>Preview before Create</h3>
                 <p class="blue-text">Contents will be updated as you type</p>
-                <div class="card">
-                    <div class="row">
-                        <div class="row">
-                            <div class="col-md col-sm col-lg justify-content-left">
-                                <div class="creator-name"> Senbagaraman Manoharan </div>
-                                <div class="creator-title"> UI Developer </div>
-                                <h6 class="creator-subtitle"> Senior Software Engineer </h6>
-                                <h6 class="creator-india"> India </h6>
-                            </div>
-
-                            <div class="col-md-3 justify-content-right">
-                              <img src="https://i.imgur.com/KykRUCV.jpeg"
-                               class="rounded-circle portoflio-dummy-image" 
-                               alt="Dummy Image">
-                            </div>
-                            
-                           
-
-                        </div>
-                        <div class="row">
-                            <h4 class="col-md-6"> Intro About Me..</h4>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 justify-content-left">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac dolor libero.
-                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-<div class="social-profile-card card">
-
-</div>
-
-                           </div>
-                            <div class="col-md-6">
-                                
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="my-5" >
+                     <app-portfoliocards [items]="[creatorForm.value]">
+                    </app-portfoliocards>
                 </div>
+              
             </div>
         </div>
         

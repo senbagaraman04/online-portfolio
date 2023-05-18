@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CreatorProfile } from 'src/app/service/CreatorProfile';
 
 @Component({
@@ -6,13 +6,8 @@ import { CreatorProfile } from 'src/app/service/CreatorProfile';
   templateUrl: './portfoliocards.component.html',
   styleUrls: ['./portfoliocards.component.scss']
 })
-export class PortfoliocardsComponent implements OnInit {
+export class PortfoliocardsComponent {
 
   @Input() items: CreatorProfile[] = [];
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+ }

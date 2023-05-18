@@ -4,7 +4,7 @@
     width: 350px;
     background: #222;
     border-radius: 5px;
-    text-align: right;
+   
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
     user-select: none;
 }
@@ -76,4 +76,12 @@
 
 .icons i:hover {
     color: #7ce3ff;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.text-align-right {
+    text-align: right;
 }
