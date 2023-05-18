@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { CreatorListComponent } from './components/creator/creator-list/creator-list.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { CreatorFormComponent } from './components/creator/creator-form/creator-form.component';
+import { PortfoliocardsComponent } from './shared/portfoliocards/portfoliocards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreatorListComponent,
     HomepageComponent,
-    CreatorFormComponent
+    CreatorFormComponent,
+    PortfoliocardsComponent
   ],
   imports: [
     BrowserModule,
