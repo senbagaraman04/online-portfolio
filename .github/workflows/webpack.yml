@@ -11,20 +11,15 @@ on:
         types: [created]
 jobs:
   build:   
-     runs-on: ubuntu-latest
-
-strategy:
-      matrix:
-        node-version: [16.x]
-steps:
+    runs-on: ubuntu-latest
+    steps:
     - uses: actions/checkout@v3
-
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-
+    - uses: actions/setup-node@v3
+      #installs Node Module to run the code
+    - name: Install dependencies
+      run: npm install
+    - name: TypeScript compiler
+      uses: iCrawl/action-tsc@v1
+      #Builds the angular application using node and in production mode
     - name: Build
-      run: |
-        npm install
-        npm run build
+      run: npm run build  --prod 
