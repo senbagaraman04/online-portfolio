@@ -1,25 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss']
+  templateUrl: './homepage.component.html'
 })
-export class HomepageComponent implements OnInit {
+export class HomepageComponent {
 
   year = new Date().getFullYear();
 
   constructor(private router: Router) { }
 
-  ngOnInit(): void {
-  }
-
-
+  /**
+   * Invoked when the user click the hire talent button
+   */
   hireTalenBtn(): void {
     this.router.navigate(['/creatorlist']).then();
   }
 
+  /**
+   * Invoked when user clicks the create button
+   */
   createBtn(): void {
     this.router.navigate(['/creatorForm']).then();
   }

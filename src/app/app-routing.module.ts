@@ -6,10 +6,10 @@ import { CreatorFormComponent } from './components/creator/creator-form/creator-
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-   { path: 'home', component: HomepageComponent },
+  { path: 'home', component: HomepageComponent },
   { path: 'creatorlist', component: CreatorListComponent },
   {
-    path:'creatorForm', component: CreatorFormComponent
+    path: 'creatorForm', component: CreatorFormComponent
   }
 ];
 
