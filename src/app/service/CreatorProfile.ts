@@ -2,11 +2,10 @@
 export interface CreatorProfile {
 
     name: string,
-    profilePic: string;
     title: string;
     subtitle?: string;
     country?: string;
-    technology?: string[];
+    technology?: string;
     yearsofExperince?: number;
     githubUrl?: string;
     gitLabUrl?: string;

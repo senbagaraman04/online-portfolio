@@ -15,49 +15,51 @@ export class CreatorlistService {
     const cProfiles: CreatorProfile[] = [
       {
         name: 'Jones Smith',
-        profilePic: '',
         subtitle: '',
-        title: 'Front End Developer'
+        title: 'Front End Developer',
+        description: 'full stack developer with 20 years of expereicne',
+        technology: 'UX, Figmaz',
+        githubUrl: 'http://www.github.com',
+        stackoverflowId: 'http://www.github.com',
+        gitLabUrl: 'http://www.github.com',
+        linkedInUrl:'http://www.github.com',
       },
       {
         name: 'Senbagaraman M',
-        profilePic: '',
         subtitle: '',
-        title: 'Professional Technology Manipulator'
+        title: 'Professional Technology Manipulator',
+        githubUrl: 'http://www.github.com',
+        stackoverflowId: 'http://www.github.com',
       },
       {
         name: 'Mukesh',
-        profilePic: '',
         subtitle: '',
-        title: 'Señor System Administrator'
+        title: 'Señor System Administrator',
+        githubUrl: 'http://www.github.com',
+        stackoverflowId: 'http://www.github.com',
       },
       {
         name: 'Daisy',
-        profilePic: '',
         subtitle: '',
         title: 'Tech Monkey '
       },
       {
         name: 'Luna Charlie',
-        profilePic: '',
         subtitle: '',
         title: 'Tech Monkey '
       },
       {
         name: 'Simba Bella',
-        profilePic: '',
         subtitle: '',
         title: 'Tech Monkey '
       },
       {
         name: 'Charley David',
-        profilePic: '',
         subtitle: '',
         title: 'Tech Monkey '
       },
       {
         name: 'Max',
-        profilePic: '',
         subtitle: '',
         title: 'Tech Monkey '
       }
