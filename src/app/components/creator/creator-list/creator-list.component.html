@@ -1,23 +1,30 @@
 <div class="container-fluid">
-    <div class="row mt-5 my-4 container-fluid">
-        <div class="col-md-5 mx-auto">
+    <div class="row container-fluid my-4 justify-content-between">
+        <div class="col-md-3 right-side-border">
             <div class="input-group" style="height:50px">
-                <input class="form-control border rounded-pill" type="search" value="" id="search-input"  placeholder=" Search for Creators">
+                <form [formGroup]="creatorForm">
+                    <input id="searchVar" formControlName="searchVar" class="form-control border rounded-pill"
+                        type="search" value="" id="search-input" placeholder=" Search for Creators">
+                </form>
+            </div>
+            <div class="leftside-section ">
+                
+                <div class="restriction-content">
+                    <ul>
+                        <li> Search for creators using the above text box using names.</li>
+                        <li> Search can be performed only with names.</li>
+                        <li> Pic and Cover-photo cannot be changed.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <app-portfoliocards [items]="items"></app-portfoliocards>
+            <div class="no-profile-cards"  *ngIf="items.length < 1">
+                <p class="text-muted container-fluid text-center">
+                    Search returned null results or there are no data.
+                </p>
             </div>
         </div>
     </div>
-    <hr>
-
-    <div class="row container-fluid my-4">
-        <div class="col-md-3">
-
-        </div>
-
-
-        <div class="col-md-9 cards-section">       
-            <app-portfoliocards [items]="items"></app-portfoliocards>
-        </div>
-       
-    </div>
 </div>
-
