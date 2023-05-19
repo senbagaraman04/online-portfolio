@@ -5,6 +5,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { CreatorFormComponent } from './components/creator/creator-form/creator-form.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
    { path: 'home', component: HomepageComponent },
   { path: 'creatorlist', component: CreatorListComponent },
   {
