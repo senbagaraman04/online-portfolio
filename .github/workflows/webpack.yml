@@ -13,10 +13,10 @@ jobs:
   build:   
      runs-on: ubuntu-latest
 
-    strategy:
+strategy:
       matrix:
         node-version: [16.x]
-    name: Online Porfolio Frontend compile
+name: Online Porfolio Frontend compile
     steps:
     - uses: actions/checkout@v3
 
