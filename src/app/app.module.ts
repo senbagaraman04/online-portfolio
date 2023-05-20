@@ -8,8 +8,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { CreatorFormComponent } from './components/creator/creator-form/creator-form.component';
 import { PortfoliocardsComponent } from './shared/portfoliocards/portfoliocards.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { PortfolioInputComponent } from './shared/portfolio-input/portfolio-input.component';
-
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +16,6 @@ import { PortfolioInputComponent } from './shared/portfolio-input/portfolio-inpu
     HomepageComponent,
     CreatorFormComponent,
     PortfoliocardsComponent,
-    PortfolioInputComponent
   ],
   imports: [
     BrowserModule,
