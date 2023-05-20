@@ -21,7 +21,6 @@ export class CreatorListComponent implements OnInit {
     this.pullCreators();
 
     this.getFormControl('searchVar').valueChanges.subscribe((data: string) => {
-      this.pullCreators();
       if (data !== '') {
         this.items = this.items.filter(x => {
           return x.name.toLocaleLowerCase().includes(data.toLocaleLowerCase())
@@ -33,7 +32,22 @@ export class CreatorListComponent implements OnInit {
   }
 
   pullCreators() {
-    this.items = this.creatorListService.getCreatorList();
+    this.creatorListService.getCreatorList()
+      .then(rep => {
+        rep.documents.forEach(prof => {
+          this.items.push({
+            name: prof['name'],
+            title: prof['title'],
+            subtitle: prof['subtitle'],
+            technology: prof['technology'],
+            stackoverflowId: prof['stackoverflowId'],
+            description: prof['description'],
+            gitLabUrl: prof['gitLabUrl'],
+            githubUrl: prof['githubUrl'],
+            linkedInUrl: prof['linkedInUrl']
+          });
+        });
+      });
   }
 
   getFormControl(fieldName: string): FormControl {
