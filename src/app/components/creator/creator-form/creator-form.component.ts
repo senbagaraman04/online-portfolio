@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CREATOR_FORMS } from './creator-form.models';
+import { CreatorlistService } from 'src/app/service/creatorlist.service';
 
 @Component({
   selector: 'app-creator-form',
@@ -11,7 +12,7 @@ import { CREATOR_FORMS } from './creator-form.models';
 export class CreatorFormComponent implements OnInit {
 
   creatorForm!: FormGroup;
-  constructor(private router: Router) {
+  constructor(private creatorService: CreatorlistService, private router: Router) {
     
    }
 
@@ -31,7 +32,8 @@ export class CreatorFormComponent implements OnInit {
    * Method called when user clicks the form  to create the profile
    */
   profileCreation() {
-      console.log(this.creatorForm.value)
+      this.creatorService.addProfiles(this.creatorForm.value);
+      this.router.navigate(['/creatorlist']);
   }
 
 

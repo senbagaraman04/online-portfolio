@@ -3,9 +3,9 @@ export interface CreatorProfile {
 
     name: string,
     title: string;
-    subtitle?: string;
-    country?: string;
-    technology?: string;
+    subtitle: string;
+    country: string;
+    technology: string;
     yearsofExperince?: number;
     githubUrl?: string;
     gitLabUrl?: string;

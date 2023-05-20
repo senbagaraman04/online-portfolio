@@ -44,7 +44,8 @@ export class CreatorListComponent implements OnInit {
             description: prof['description'],
             gitLabUrl: prof['gitLabUrl'],
             githubUrl: prof['githubUrl'],
-            linkedInUrl: prof['linkedInUrl']
+            linkedInUrl: prof['linkedInUrl'],
+            country: prof['country']
           });
         });
       });

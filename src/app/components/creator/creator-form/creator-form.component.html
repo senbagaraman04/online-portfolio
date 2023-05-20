@@ -6,10 +6,13 @@
                     <div class="heading card">
                         <h3>Create your Portfolio</h3>
                         <p class="blue-text">Just add your details</p>
+                        <p class="text-muted"> URL's should be in the format http://www.url.com </p>
+                      
                     </div>
                   
                     <div class="card">
                         <h5 class="text-center mb-4">Powering world-class Creators</h5>
+
                         <form class="form-card"  [formGroup]="creatorForm">
                             <div class="row justify-content-between text-left">
                                 <div class="form-group col-sm-6 flex-column d-flex">
@@ -41,24 +44,24 @@
                             </div>
                             <div class="row justify-content-between text-left">
                                 <div class="form-group col-sm-6 flex-column d-flex">
-                                    <input type="text" id="githubUrl" name="githubUrl" placeholder="Github URL" formControlName="githubUrl" required>
+                                    <input   id="githubUrl" name="githubUrl" type="url" title="Github URL" placeholder="Github URL" formControlName="githubUrl" required>
                                 </div>
                                 <div class="form-group col-sm-6 flex-column d-flex"> 
-                                    <input type="text" id="gitLabUrl" name="gitLabUrl" placeholder="Gitlab URL" formControlName="gitLabUrl"  required>
+                                    <input  id="gitLabUrl" name="gitLabUrl" type="url" placeholder="Gitlab URL" title="Gitlab URL" formControlName="gitLabUrl"  required>
                                     </div>
                             </div>
                             <div class="row justify-content-between text-left">
                                 <div class="form-group col-sm-6 flex-column d-flex">
-                                    <input type="text" id="linkedInUrl" name="linkedInUrl" placeholder="LinkedIn URL" formControlName="linkedInUrl"  required>
+                                    <input  id="linkedInUrl" name="linkedInUrl" type="url" placeholder="LinkedIn URL" title="LinkedIn URL" formControlName="linkedInUrl"  required>
                                 </div>
                                 <div class="form-group col-sm-6 flex-column d-flex"> 
-                                    <input type="text" id="stackoverflowId" name="stackoverflowId" placeholder="Stackoverflow URL" formControlName="stackoverflowId"  required>
+                                    <input   id="stackoverflowId" name="stackoverflowId" type="url" placeholder="Stackoverflow URL" title="LinkedIn URL" formControlName="stackoverflowId"  required>
                                 </div>
                             </div>                          
                             
                             <div class="row justify-content-center my-">
                                 <div class="form-group col-sm-6">
-                            <button type="submit" class="btn btn-primary" 
+                            <button type="submit" class="btn btn-primary"  [disabled]="!creatorForm.valid" 
                                      (click)="profileCreation()">Create Profile</button> </div>
                             </div>
                         </form>
@@ -72,13 +75,14 @@
                     <div class="heading card">
                         <h3 class="justify-content-left">Preview before Create</h3>
                         <p class="blue-text">Contents will be updated as you type</p>
+                        <p class="text-muted"> All fields are mandatory.</p>
                     </div>
 
 
                   
                 </div>
                
-                <div class="my-5" >
+                <div class="" >
                      <app-portfoliocards [items]="[creatorForm.value]">
                     </app-portfoliocards>
                 </div>
