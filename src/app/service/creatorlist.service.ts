@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Account, Client, Databases, ID } from 'appwrite';
+import { Client, Databases, ID } from 'appwrite';
 import { environment } from 'src/environments/environment';
 import { CreatorProfile } from './CreatorProfile';
 
@@ -28,10 +28,9 @@ export class CreatorlistService {
   /**
    * Adds the profile to the database
    */
-  addProfiles(profileData: CreatorProfile){
+  addProfiles(profileData: CreatorProfile){   
     
-    
-    this.databases.createDocument(environment.databaseID,environment.collectionID, ID.unique(), profileData );
+   return this.databases.createDocument(environment.databaseID,environment.collectionID, ID.unique(), profileData );
   }
    
 }

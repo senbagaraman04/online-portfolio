@@ -12,6 +12,7 @@ import { CreatorlistService } from 'src/app/service/creatorlist.service';
 export class CreatorFormComponent implements OnInit {
 
   creatorForm!: FormGroup;
+  showtoast = false;
   constructor(private creatorService: CreatorlistService, private router: Router) {
     
    }
@@ -32,8 +33,15 @@ export class CreatorFormComponent implements OnInit {
    * Method called when user clicks the form  to create the profile
    */
   profileCreation() {
-      this.creatorService.addProfiles(this.creatorForm.value);
-      this.router.navigate(['/creatorlist']);
+    this.creatorService.addProfiles(this.creatorForm.value).then(response => {
+        this.router.navigate(['/creatorlist']);
+      }, _error => {
+         this.showtoast = true;
+      });   
+  }
+
+  toastClose() {
+    this.showtoast = false;
   }
 
 

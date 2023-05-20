@@ -9,6 +9,20 @@
                         <p class="text-muted"> URL's should be in the format http://www.url.com </p>
                       
                     </div>
+
+                    <div class="toast-message p-3 m-0 border-0 bd-example" *ngIf="showtoast">
+                        <div class="toast align-items-center fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="d-flex">
+                              <div class="toast-body">
+                                 There are errors in the form, rectify and resubmit
+                              </div>
+                              <button type="button"
+                               class="btn-close me-2 m-auto"
+                               (click)="toastClose()"
+                                data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                          </div>
+                    </div>
                   
                     <div class="card">
                         <h5 class="text-center mb-4">Powering world-class Creators</h5>
