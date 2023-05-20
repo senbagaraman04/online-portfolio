@@ -7,7 +7,7 @@
                         type="search" value="" id="search-input" placeholder=" Search for Creators">
                 </form>
             </div>
-            <div class="leftside-section ">
+            <div class="leftside-section blue-text">
                 
                 <div class="restriction-content">
                     <ul>
@@ -21,7 +21,7 @@
         <div class="col-md-9">
             <app-portfoliocards [items]="items"></app-portfoliocards>
             <div class="no-profile-cards"  *ngIf="items.length < 1">
-                <p class="text-muted container-fluid text-center">
+                <p class="container-fluid text-center blue-text font-weight-bold">
                     Search returned null results or there are no data.
                 </p>
             </div>
