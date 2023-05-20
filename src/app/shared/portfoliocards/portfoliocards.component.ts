@@ -9,5 +9,13 @@ import { CreatorProfile } from 'src/app/service/CreatorProfile';
 export class PortfoliocardsComponent {
 
   @Input() items: CreatorProfile[] = [];
+  @Input() showButton = true;
+
+  /**
+   * Invoked when user clicks on the view more button
+   */
+  viewMore() {
+     
+  }
 
  }

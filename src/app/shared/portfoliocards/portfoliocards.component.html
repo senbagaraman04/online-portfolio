@@ -33,6 +33,9 @@
              <a [attr.href]="i.gitLabUrl" *ngIf="i.gitLabUrl" target="_blank"> <i class="bi bi-browser-chrome"> </i></a>
  
             </div>
+
+
+            <button class="btn btn-primary" (click)="viewMore()" *ngIf="showButton"> View More</button>
     </div>
 
     
