@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CreatorProfile } from 'src/app/service/CreatorProfile';
 import { CreatorlistService } from 'src/app/service/creatorlist.service';
 import { GithubService } from 'src/app/service/github.service';
+import { StackoverflowService } from 'src/app/service/stackoverflow.service';
 
 @Component({
   selector: 'app-portfolio-details',
@@ -13,9 +14,11 @@ export class PortfolioDetailsComponent implements OnInit {
 
   profileDetails: CreatorProfile = {} as CreatorProfile;
   githubData: any;
+  stacoverflowData: any;
 
   constructor(private route: ActivatedRoute,
-    private creatorService: CreatorlistService, private githubService: GithubService) { }
+    private creatorService: CreatorlistService, private githubService: GithubService,
+    private stackOverflowService: StackoverflowService) { }
 
   ngOnInit(): void {
     this.creatorService.dataBehaviourSubject.pipe().subscribe(data => {
@@ -63,6 +66,19 @@ export class PortfolioDetailsComponent implements OnInit {
       const userName = this.profileDetails.githubUrl.substring(this.profileDetails.githubUrl.lastIndexOf('/') + 1);
       this.githubService.getUserDetails(userName).subscribe(response => {
         this.githubData = response;
+      });
+    }
+
+    this.getStackOverflowDetails();
+  }
+
+  getStackOverflowDetails(){
+    if(this.profileDetails.stackoverflowId){
+      const userName = this.profileDetails.stackoverflowId.split('/');
+      console.log(userName)
+      this.stackOverflowService.getUserDetails(userName[4]).subscribe(response => {
+        this.stacoverflowData = response.items[0];
+        console.log(response.items[0]);
       });
     }
   }

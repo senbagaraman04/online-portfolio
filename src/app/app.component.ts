@@ -11,7 +11,6 @@ export class AppComponent {
   showHeader = true;
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
-      console.group(router.url)
       if (router.url.startsWith('/details')) {
        this.showHeader = false;
       }
