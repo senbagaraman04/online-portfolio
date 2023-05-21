@@ -9,3 +9,22 @@
 .blue-text {
     color: #00BCD4
 }
+
+.icons {
+    width: 180px;
+    margin: 0 auto 10px;    
+    gap: 15px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.icons i {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.icons i:hover {
+    color: #7ce3ff;
+}

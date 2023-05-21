@@ -2,6 +2,7 @@
 export interface CreatorProfile {
 
     name: string,
+    id?: string;
     title: string;
     subtitle: string;
     country: string;

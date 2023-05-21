@@ -35,6 +35,7 @@ export class CreatorListComponent implements OnInit {
     this.creatorListService.getCreatorList()
       .then(rep => {
         rep.documents.forEach(prof => {
+          console.log(prof)
           this.items.push({
             name: prof['name'],
             title: prof['title'],
@@ -45,7 +46,8 @@ export class CreatorListComponent implements OnInit {
             gitLabUrl: prof['gitLabUrl'],
             githubUrl: prof['githubUrl'],
             linkedInUrl: prof['linkedInUrl'],
-            country: prof['country']
+            country: prof['country'],
+            id: prof['$id']
           });
         });
       });

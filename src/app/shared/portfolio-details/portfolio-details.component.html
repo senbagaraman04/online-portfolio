@@ -1,0 +1,62 @@
+<div class="container-fluid text-white my-1 mx-1 card-white">
+    <div class="bg-sdark">
+        <div class="row ">
+            <div class="col-md-12 my-3 mx-4">
+                <h3> {{profileDetails.name}}</h3>
+                <h5>  {{profileDetails.title}}</h5>
+                <h5>  {{profileDetails.subtitle}}</h5>
+            </div>
+        </div>
+
+
+        <div class="row card-white">
+            <div class="col-md-6  text-blue">
+                <h4> About Me:</h4>
+                {{profileDetails.description}}
+
+                <div class="icons white-text px-2 my-2">
+                    <a [attr.href]="profileDetails.githubUrl"  *ngIf="profileDetails.githubUrl" target="_blank"> <i class="bi bi-github"> </i></a>
+                   <a [attr.href]="profileDetails.stackoverflowId" *ngIf="profileDetails.stackoverflowId" target="_blank"> <i class="bi bi-stack-overflow"> </i></a>
+                   <a [attr.href]="profileDetails.linkedInUrl" *ngIf="profileDetails.linkedInUrl" target="_blank"> <i class="bi bi-linkedin"> </i></a>
+                   <a [attr.href]="profileDetails.gitLabUrl" *ngIf="profileDetails.gitLabUrl" target="_blank"> <i class="bi bi-browser-chrome"> </i></a>
+       
+                  </div>
+            </div>
+
+            <div class="col-md-6  text-blue" *ngIf="githubData">
+                <h4> Github Status</h4>
+                <div class="row github-wrapper">
+                    <div class="cardProfile mx-2 my-2">
+                        <div class="cover-photo">
+                            <img [attr.src]="githubData.avatar_url" class="profile-social" alt="{{githubData.name}}">
+                        </div>
+                        <div class="row ml-2">
+                            <p class="github-stats-bio">
+                                {{githubData.bio}}
+                            </p>
+                            <p class="github-stats-followers">
+                                Followers: {{githubData.followers}}
+                            </p>
+                            <p class="github-stats-following">
+                                Following: {{githubData.following}}
+                            </p>
+                            <p class="github-stats-publicrepo">
+                                Repositories: {{githubData.public_repos}}
+                            </p>
+                            <p class="github-stats-public-gist">
+                                Gists: {{githubData.public_gists}}
+                            </p>
+                        </div>
+
+                        <div class="github-lastupdate icons">
+
+                            <a [attr.href]="githubData.html_url" target="_blank"> <i class="bi bi-github"> </i></a>
+
+                            Last updated at {{githubData.updated_at}}.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
