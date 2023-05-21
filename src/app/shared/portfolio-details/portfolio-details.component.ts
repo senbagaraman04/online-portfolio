@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CreatorProfile } from 'src/app/service/CreatorProfile';
 import { CreatorlistService } from 'src/app/service/creatorlist.service';
 import { GithubService } from 'src/app/service/github.service';
@@ -17,6 +17,7 @@ export class PortfolioDetailsComponent implements OnInit {
   stacoverflowData: any;
 
   constructor(private route: ActivatedRoute,
+    private router: Router,
     private creatorService: CreatorlistService, private githubService: GithubService,
     private stackOverflowService: StackoverflowService) { }
 
@@ -81,6 +82,11 @@ export class PortfolioDetailsComponent implements OnInit {
         console.log(response.items[0]);
       });
     }
+  }
+
+
+  backButtonClick(){
+    this.router.navigate(['./creatorlist'])
   }
 
 }

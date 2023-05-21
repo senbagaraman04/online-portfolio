@@ -1,10 +1,13 @@
 <div class="container-fluid text-white card-white">
     <div class="bg-sdark">
         <div class="row ">
-            <div class="col-md-12 my-3 mx-4">
+            <div class="col-md-9 my-3 mx-4">
                 <h3> {{profileDetails.name}}</h3>
                 <h5>  {{profileDetails.title}}</h5>
                 <h5>  {{profileDetails.subtitle}}</h5>
+            </div>
+            <div class="col-md-2 my-3 mx-4">
+               <button class="btn btn-primary" (click)="backButtonClick()">Back</button>
             </div>
         </div>
 

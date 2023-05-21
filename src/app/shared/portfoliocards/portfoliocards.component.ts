@@ -25,4 +25,11 @@ export class PortfoliocardsComponent {
      this.creatorService.profileDataPush(selectedProfile);
   }
 
+
+  showDescription(desp: string | undefined) {
+
+    return desp?.substring(0,50).concat('....');
+
+  }
+
  }
