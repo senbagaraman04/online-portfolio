@@ -10,6 +10,8 @@ import { PortfoliocardsComponent } from './shared/portfoliocards/portfoliocards.
 import { ReactiveFormsModule } from '@angular/forms';
 import { PortfolioDetailsComponent } from './shared/portfolio-details/portfolio-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GithubCardComponent } from './shared/github-card/github-card.component';
+import { StackoverflowCardComponent } from './shared/stackoverflow-card/stackoverflow-card.component';
  
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     CreatorFormComponent,
     PortfoliocardsComponent,
     PortfolioDetailsComponent,
+    GithubCardComponent,
+    StackoverflowCardComponent,
   ],
   imports: [
     BrowserModule,
