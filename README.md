@@ -1,27 +1,79 @@
-# OnlinePortfolio
+# Introduction:
+Online Portfolio is an Angular-based application that collects the data from the user and internally pulls up statistics from GitHub and Stackoverflow and presents a sharable URL with a bio for the user.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
+#appwrite #AppwriteHackathon
 
-## Development server
+![Online Portfolio.](https://cdn.hashnode.com/res/hashnode/image/upload/v1684655118743/5210134e-eae4-4e65-8403-c136f393f664.png?auto=compress,format&format=webp)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Use case:
+There are various options for the developers to create a portfolio, while most of them require an account creation on their site or privacy at its bite, so this application will not ask you to create an account or collects your email id. The application generates a valid URL for all the profiles and, if the user needs to update something (which a developer rarely will do :P ), he/she can create a new profile and share the link across.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Links:
+Public Repo: https://github.com/senbagaraman04/online-portfolio
 
-## Build
+Public Hosted Link: https://senbagaraman04.github.io/online-portfolio/
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Technology:
+Angular v14.3.0 - The base application.
 
-## Running unit tests
+Git - version control.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+GitHub - Version Control Repository.
 
-## Running end-to-end tests
+Boostrap v5.2.3 - Powerful, extensible, and feature-packed frontend toolkit.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Appwrite -v11.0 - Appwrite to store and rewrite the data.
 
-## Further help
+# Behind the Scenes:
+The app is created using Angular v14.3 and using Bootstrap v5.2.3. The application allows the user to create a profile (Did we say the user dont need to create an account. :) .
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Online Portfolio.](https://cdn.hashnode.com/res/hashnode/image/upload/v1684655118743/5210134e-eae4-4e65-8403-c136f393f664.png?auto=compress,format&format=webp)
+
+
+The user should click on the Create your skill button and will be greeted with a form and a preview page on the right side content,
+
+![Online Portfolio.](https://cdn.hashnode.com/res/hashnode/image/upload/v1684655185311/bab5550a-8962-4183-9897-d47cfd31814e.png?auto=compress,format&format=webp)
+
+Update the contents of the form and the same can be viewed as the user types. The application does have some restrictions like, the profile and the cover photo are static and can't be changed. (We are working on it..)
+
+While editing the screen will be looking as follows,
+
+![Online Portfolio.](https://cdn.hashnode.com/res/hashnode/image/upload/v1684656853116/dd5e4a8e-d842-44a6-a357-158d94df0638.png?auto=compress,format&format=webp)
+
+
+After hitting the button, the data hits the Appwrite database and store the data in their respective database and collections. The communication between the application and the appwrite serves is governed by the API-keys and client secrets.
+
+If the saving encounters a error, then a popup window shows on the screen,
+
+![Online Portfolio.](https://cdn.hashnode.com/res/hashnode/image/upload/v1684657355842/fedc40fb-3517-47d1-8dfc-6783cc8d3bac.png?auto=compress,format&format=webp)
+
+Once the data gets saved correctly, the application will redirect the user to the listing page, where they can see the list of users created on the site,
+
+
+
+![Online Portfolio.](https://cdn.hashnode.com/res/hashnode/image/upload/v1684657408466/76e2d6ef-eb2e-484c-9e4a-21a018d7677b.png?auto=compress,format&format=webp)
+
+
+The search button on the left, will act as a filter,
+
+
+![Online Portfolio.](https://cdn.hashnode.com/res/hashnode/image/upload/v1684657408466/76e2d6ef-eb2e-484c-9e4a-21a018d7677b.png?auto=compress,format&format=webp)
+
+
+The view more button leads to a details section with a unique URL.
+
+
+![Online Portfolio.](https://senbagaraman04.github.io/online-portfolio/details/64679aade76e5070a2ea)
+
+
+
+The details page will pull the Stackoverflow and GitHub data from their respective api's and populate the data such as followers, repositories from GitHub and medals from Stackoverflow.
+
+
+![Online Portfolio.](https://cdn.hashnode.com/res/hashnode/image/upload/v1684657698075/bab7922c-5fcc-4e7f-b6d1-ef219edb4798.png?auto=compress,format&format=webp)
+
+The above-mentioned page is permanently accessible to anyone and the user can share the profile with their potential employers. About me section will have links to their GitHub, stackoverflow and LinkedIn pages.
+
+#appwrite #AppwriteHackathon #portfolio
+

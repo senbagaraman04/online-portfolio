@@ -17,11 +17,7 @@ export function CREATOR_FORMS() {
           Validators.minLength(1),
           Validators.maxLength(250),
         ]),
-        phoneNumber: new FormControl('', [
-          Validators.required,
-          Validators.minLength(1),
-          Validators.maxLength(250),
-        ]),
+        phoneNumber: new FormControl('0000000000'),
         country: new FormControl('', [
           Validators.required,
           Validators.minLength(1),
@@ -42,11 +38,7 @@ export function CREATOR_FORMS() {
           Validators.minLength(1),
           Validators.maxLength(250),
         ]),
-        gitLabUrl: new FormControl('', [
-          Validators.required,
-          Validators.minLength(1),
-          Validators.maxLength(250),
-        ]),
+        gitLabUrl: new FormControl('https://www.gitlab.com/'),
         linkedInUrl: new FormControl('', [
           Validators.required,
           Validators.minLength(1),

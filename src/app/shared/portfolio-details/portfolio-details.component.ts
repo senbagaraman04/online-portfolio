@@ -47,7 +47,7 @@ export class PortfolioDetailsComponent implements OnInit {
         technology: prof['technology'],
         stackoverflowId: prof['stackoverflowId'],
         description: prof['description'],
-        gitLabUrl: prof['gitLabUrl'],
+        
         githubUrl: prof['githubUrl'],
         linkedInUrl: prof['linkedInUrl'],
         country: prof['country'],
