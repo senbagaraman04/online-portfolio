@@ -15,6 +15,7 @@ export class PortfolioDetailsComponent implements OnInit {
   profileDetails: CreatorProfile = {} as CreatorProfile;
   githubData: any;
   stacoverflowData: any;
+  loadingScreen = true;
 
   constructor(private route: ActivatedRoute,
     private router: Router,
@@ -22,24 +23,27 @@ export class PortfolioDetailsComponent implements OnInit {
     private stackOverflowService: StackoverflowService) { }
 
   ngOnInit(): void {
-    this.creatorService.dataBehaviourSubject.pipe().subscribe(data => {
-      if (data == undefined) {
-       this.pullDataonID();
-       this.getGithubDetails();
-       return;
-      }
-      this.profileDetails = data;
-    
-      this.getGithubDetails();
-    });
 
-   
+    setTimeout(() => {
+      this.creatorService.dataBehaviourSubject.pipe().subscribe(data => {
+        if (data == undefined) {
+          this.pullDataonID();
+          return;
+        }
+        this.profileDetails = data;
+
+        this.getGithubDetails();
+      });
+    }, 200);
+
+
+
   }
 
 
   private pullDataonID() {
     this.creatorService.getParticularCreator(this.route.snapshot.params['id']).then(prof => {
-      console.log(prof);
+
       this.profileDetails = {
         name: prof['name'],
         title: prof['title'],
@@ -47,7 +51,7 @@ export class PortfolioDetailsComponent implements OnInit {
         technology: prof['technology'],
         stackoverflowId: prof['stackoverflowId'],
         description: prof['description'],
-        
+
         githubUrl: prof['githubUrl'],
         linkedInUrl: prof['linkedInUrl'],
         country: prof['country'],
@@ -73,21 +77,38 @@ export class PortfolioDetailsComponent implements OnInit {
     this.getStackOverflowDetails();
   }
 
-  getStackOverflowDetails(){
-    if(this.profileDetails.stackoverflowId){
+  getStackOverflowDetails() {
+    if (this.profileDetails.stackoverflowId) {
       const userName = this.profileDetails.stackoverflowId.split('/');
-      console.log(userName)
-      this.stackOverflowService.getUserDetails(userName[4]).subscribe(response => {
-        this.stacoverflowData = response.items[0];
-        console.log(response.items[0]);
-      });
+
+      this.stackOverflowService.getUserDetails(userName[4]).subscribe(
+        {
+          next: (response) => {
+            this.stacoverflowData = response.items[0];
+            this.stoploadingScreen();
+          },
+          error: () => { this.stoploadingScreen(); }
+        });
+
     }
   }
 
 
-  backButtonClick(){
+  backButtonClick() {
     this.router.navigate(['./creatorlist'])
   }
 
+
+  viewMore(urlToRedirect: string) {
+    let anchor = document.createElement('a');
+    anchor.href = urlToRedirect;
+    anchor.target = "_blank";
+    anchor.click();
+  }
+
+
+  stoploadingScreen() {
+    this.loadingScreen = false;
+  }
 }
 

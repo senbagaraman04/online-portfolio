@@ -5,13 +5,23 @@
     user-select: none;
 }
 
-.card-white {
-    padding: 20px;  
-    border-radius: 5px; 
-    user-select: none;
+ .btn {
+    margin: 30px 15px;
+    border-color: #7ce3ff;
+    padding: 10px 25px;
+    border-radius: 3px;
+    border: 1px solid #7ce3ff;
+    font-weight: bold;
+    cursor: pointer;   
+    transition: 0.2s;
+    background: transparent;
+    color: #7ce3ff;
 }
 
 
-.portfoliodetails {
-    height: 100vh;
+.btn:hover {
+    background: #7ce3ff;
+    color: #222;
 }
+
+

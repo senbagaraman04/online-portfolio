@@ -1,25 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-primary shadow-sm bg-light" *ngIf="showHeader">
     <a class="navbar-brand d-flex align-items-center my-2 font-weight-bold blue-text" href="./home">Online Protfolio</a>
-    <button class="navbar-toggler" type="button"
-     data-bs-toggle="collapse" 
-     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav my-2 ml-2">
-         
-          <a href="./home" class=" nav-item nav-link  ramsrecruit-sidenav-link-home" 
-           routerLinkActive="active"> Home </a>
-        <a  href="./creatorForm" class="nav-item nav-link ramsrecruit-sidenav-link" 
-         routerLinkActive="active"> Add your Profile </a>
-        <a   href="./creatorlist" class=" nav-item nav-link  ramsrecruit-sidenav-link"  
-            routerLinkActive="active"> Search Creators </a>
-          
-      
-          </ul>
-    </div>
-  </nav> 
+        <ul class="navbar-nav my-2 ml-2">
 
+            <a href="./home" class=" nav-item nav-link  ramsrecruit-sidenav-link-home" routerLinkActive="active"> Home
+            </a>
+            <a href="./creatorForm" class="nav-item nav-link ramsrecruit-sidenav-link" routerLinkActive="active"> Add
+                your Profile </a>
+            <a href="./creatorlist" class=" nav-item nav-link  ramsrecruit-sidenav-link" routerLinkActive="active">
+                Search Creators </a>
+
+
+        </ul>
+    </div>
+</nav>
 
 <router-outlet></router-outlet>
