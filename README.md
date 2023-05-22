@@ -85,3 +85,6 @@ The above-mentioned page is permanently accessible to anyone and the user can sh
 # Credits:
 Background typewriter photo credit : https://unsplash.com/@patrickian4
 
+
+The technical writeup can also be seen at https://senbagaraman04.hashnode.dev/online-portfolio-appwrite-hashnode-hackathon
+
