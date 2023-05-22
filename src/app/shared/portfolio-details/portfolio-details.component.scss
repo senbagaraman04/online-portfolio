@@ -2,13 +2,16 @@
     padding: 15px;
     background: #222;
     border-radius: 5px; 
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
     user-select: none;
 }
 
 .card-white {
-    padding: 15px;  
+    padding: 20px;  
     border-radius: 5px; 
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
     user-select: none;
+}
+
+
+.portfoliodetails {
+    height: 100vh;
 }
