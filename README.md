@@ -5,6 +5,10 @@ Online Portfolio is an Angular-based application that collects the data from the
 
 ![Online Portfolio.](https://cdn.hashnode.com/res/hashnode/image/upload/v1684655118743/5210134e-eae4-4e65-8403-c136f393f664.png?auto=compress,format&format=webp)
 
+# Team Members:
+
+Senbagaraman M : https://hashnode.com/@senbagaraman04
+
 
 # Use case:
 There are various options for the developers to create a portfolio, while most of them require an account creation on their site or privacy at its bite, so this application will not ask you to create an account or collects your email id. The application generates a valid URL for all the profiles and, if the user needs to update something (which a developer rarely will do :P ), he/she can create a new profile and share the link across.
@@ -64,7 +68,7 @@ The search button on the left, will act as a filter,
 The view more button leads to a details section with a unique URL.
 
 
-![Online Portfolio.](https://senbagaraman04.github.io/online-portfolio/details/64679aade76e5070a2ea)
+![Online Portfolio.](https://cdn.hashnode.com/res/hashnode/image/upload/v1684657493450/4a378aaa-12fc-479c-ba68-fb9d101a3069.png)
 
 
 
