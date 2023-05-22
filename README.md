@@ -81,3 +81,7 @@ The above-mentioned page is permanently accessible to anyone and the user can sh
 
 #appwrite #AppwriteHackathon #portfolio
 
+
+# Credits:
+Background typewriter photo credit : https://unsplash.com/@patrickian4
+
