@@ -5,13 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './github-card.component.html',
   styleUrls: ['./github-card.component.scss']
 })
-export class GithubCardComponent implements OnInit {
+export class GithubCardComponent {
 
   @Input() githubData: any;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

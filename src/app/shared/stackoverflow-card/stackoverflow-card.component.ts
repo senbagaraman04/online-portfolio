@@ -5,13 +5,8 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './stackoverflow-card.component.html',
   styleUrls: ['../github-card/github-card.component.scss']
 })
-export class StackoverflowCardComponent implements OnInit {
+export class StackoverflowCardComponent {
 
   @Input() stacoverflowData: any;
   
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
