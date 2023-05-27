@@ -49,7 +49,7 @@ export class CreatorListComponent implements OnInit {
             id: prof['$id']
           });
         });
-      });
+      }).catch(error => console.log(error));
   }
 
   getFormControl(fieldName: string): FormControl {
