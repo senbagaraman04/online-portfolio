@@ -1,4 +1,5 @@
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { urlValidator } from "src/app/shared/validators/url.validators";
 
 export function CREATOR_FORMS() {
     return new FormGroup({
@@ -37,17 +38,22 @@ export function CREATOR_FORMS() {
           Validators.required,
           Validators.minLength(1),
           Validators.maxLength(250),
+          urlValidator('github')
         ]),
         gitLabUrl: new FormControl('https://www.gitlab.com/'),
         linkedInUrl: new FormControl('', [
           Validators.required,
           Validators.minLength(1),
           Validators.maxLength(250),
+          urlValidator('linkedIn')
         ]),
         stackoverflowId:  new FormControl('', [
           Validators.required,
           Validators.minLength(1),
           Validators.maxLength(250),
+          urlValidator('stackoverflow')
         ]),
       });
 }
+
+

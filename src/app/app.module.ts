@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { CreatorListComponent } from './components/creator/creator-list/creator-list.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { CreatorFormComponent } from './components/creator/creator-form/creator-form.component';
-import { PortfoliocardsComponent } from './shared/portfoliocards/portfoliocards.component';
+import { PortfoliocardsComponent } from './shared/components/portfoliocards/portfoliocards.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { PortfolioDetailsComponent } from './shared/portfolio-details/portfolio-details.component';
+import { PortfolioDetailsComponent } from './shared/components/portfolio-details/portfolio-details.component';
 import { HttpClientModule } from '@angular/common/http';
-import { GithubCardComponent } from './shared/github-card/github-card.component';
-import { StackoverflowCardComponent } from './shared/stackoverflow-card/stackoverflow-card.component';
+import { GithubCardComponent } from './shared/components/github-card/github-card.component';
+import { StackoverflowCardComponent } from './shared/components/stackoverflow-card/stackoverflow-card.component';
  
 @NgModule({
   declarations: [
