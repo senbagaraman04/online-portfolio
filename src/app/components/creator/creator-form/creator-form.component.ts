@@ -33,8 +33,8 @@ export class CreatorFormComponent implements OnInit {
    * Method called when user clicks the form  to create the profile
    */
   profileCreation() {
-    this.creatorService.addProfiles(this.creatorForm.value).then(response => {
-        this.router.navigate(['/creatorlist']);
+    this.creatorService.addProfiles(this.creatorForm.value).then(_response => {
+        this.router.navigate(['/creatorlist']).catch(() => { });
       }, _error => {
          this.showtoast = true;
       });   

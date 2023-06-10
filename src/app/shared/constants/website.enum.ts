@@ -4,5 +4,7 @@ export enum portfolioEnum {
     stackoverflow = 'StackOverFlow',
     StackoverFlowDotCom = 'https://www.stackoverflow.com/',
     linkedIn = 'LinkedIn',
-    LinkedInDotCom = 'https://www.linkedin.com/'
+    LinkedInDotCom = 'https://www.linkedin.com/',
+
+    dummyPhoneNumber = '0000000000'
 }

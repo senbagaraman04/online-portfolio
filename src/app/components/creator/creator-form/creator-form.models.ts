@@ -1,4 +1,5 @@
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { portfolioEnum } from "src/app/shared/constants/website.enum";
 import { urlValidator } from "src/app/shared/validators/url.validators";
 
 export function CREATOR_FORMS() {
@@ -18,7 +19,7 @@ export function CREATOR_FORMS() {
           Validators.minLength(1),
           Validators.maxLength(250),
         ]),
-        phoneNumber: new FormControl('0000000000'),
+        phoneNumber: new FormControl(portfolioEnum.dummyPhoneNumber),
         country: new FormControl('', [
           Validators.required,
           Validators.minLength(1),
@@ -38,20 +39,20 @@ export function CREATOR_FORMS() {
           Validators.required,
           Validators.minLength(1),
           Validators.maxLength(250),
-          urlValidator('github')
+          urlValidator(portfolioEnum.github)
         ]),
         gitLabUrl: new FormControl('https://www.gitlab.com/'),
         linkedInUrl: new FormControl('', [
           Validators.required,
           Validators.minLength(1),
           Validators.maxLength(250),
-          urlValidator('linkedIn')
+          urlValidator(portfolioEnum.linkedIn)
         ]),
         stackoverflowId:  new FormControl('', [
           Validators.required,
           Validators.minLength(1),
           Validators.maxLength(250),
-          urlValidator('stackoverflow')
+          urlValidator(portfolioEnum.stackoverflow)
         ]),
       });
 }
